@@ -6,5 +6,13 @@
     "protocol": "*",
     "port": "*",
     "action": "deny"
+  },
+  {
+    "id": "threat_feed_137.184.9.29",
+    "src_ip": "137.184.9.29",
+    "dst_ip": "*",
+    "protocol": "*",
+    "port": "*",
+    "action": "deny"
   }
 ]

@@ -1,4 +1,10 @@
-# preprocessing/feature_extraction.py
+"""
+Extract useful statistical and protocol-level features from packet data.
+Input: DataFrame with raw packet fields (src_ip, dst_ip, sport, dport, length, etc.)
+Output: Feature-enhanced DataFrame.
+"""
+
+import pandas as pd
 """
 Extract useful statistical and protocol-level features from packet data.
 Input: DataFrame with raw packet fields (src_ip, dst_ip, sport, dport, length, etc.)
@@ -7,6 +13,7 @@ Output: Feature-enhanced DataFrame.
 
 import pandas as pd
 import numpy as np
+
 
 def add_basic_features(df: pd.DataFrame) -> pd.DataFrame:
     """Add common statistical features derived from traffic."""

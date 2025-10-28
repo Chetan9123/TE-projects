@@ -5,6 +5,13 @@ Expect input features as pandas DataFrame (flows/features) and labels as Series.
 """
 
 import os
+# ai_detection/model_utils.py
+"""
+Utilities for dataset handling, PyTorch Dataset and simple preprocessing helpers.
+Expect input features as pandas DataFrame (flows/features) and labels as Series.
+"""
+
+import os
 import joblib
 import numpy as np
 import pandas as pd
