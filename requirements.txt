@@ -1,0 +1,12 @@
+scapy>=2.4.5
+pyshark>=0.4.2
+pymongo>=3.12
+pandas
+numpy
+scikit-learn
+PyWavelets
+torch
+joblib
+matplotlib
+reportlab
+requests

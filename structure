@@ -1,0 +1,87 @@
+│── README.md
+│── requirements.txt
+│── main.py                     # Main entry point to start all modules
+│── config.yaml                 # Global config: paths, model names, ports, etc.
+│── docker-compose.yml          # (Optional) For containerized deployment
+│
+├── 📁 data_collection/          # Module 1 – Network Traffic Data Acquisition
+│   │── __init__.py
+│   │── capture_packets.py       # Captures live network packets (Wireshark/tcpdump)
+│   │── parse_pcap.py            # Reads PCAP files using pyshark/scapy
+│   │── store_raw_data.py        # Saves captured data to database or file
+│   └── sensors/                 # Optional Zeek/Bro sensor scripts
+│       └── zeek_logs_parser.py
+│
+├── 📁 preprocessing/            # Module 2 – Data Preprocessing & Feature Engineering
+│   │── __init__.py
+│   │── clean_data.py            # Removes redundant/malformed packets
+│   │── feature_extraction.py    # Extracts statistical & protocol features
+│   │── wavelet_transform.py     # Applies wavelet transform for signal enhancement
+│   │── feature_selection.py     # PCA / correlation filtering
+│   └── utils_preprocess.py
+│
+├── 📁 ai_detection/             # Module 3 – AI-Based Threat Detection
+│   │── __init__.py
+│   │── model_train.py           # Trains CNN/LSTM/hybrid model
+│   │── model_evaluate.py        # Generates confusion matrix, accuracy, etc.
+│   │── model_predict.py         # Real-time prediction interface
+│   │── model_utils.py           # Data loaders, preprocessing functions
+│   └── saved_models/            # Stores trained .pt / .h5 models
+│
+├── 📁 zero_trust_control/       # Module 4 – Zero Trust Access Control
+│   │── __init__.py
+│   │── identity_verification.py # Validates users/devices based on trust scores
+│   │── access_rules.py          # Implements least-privilege & continuous validation
+│   │── session_monitor.py       # Tracks and verifies session behaviors
+│   └── trust_score_model.py     # Optional ML-based trust scoring
+│
+├── 📁 firewall_engine/          # Module 5 – Policy Enforcement & Response Automation
+│   │── __init__.py
+│   │── rule_engine.py           # Dynamic firewall rules engine
+│   │── packet_filter.py         # Filters/blocks malicious traffic
+│   │── response_automation.py   # Auto-block/quarantine based on predictions
+│   │── integration.py           # Integrates AI predictions with rule engine
+│   └── logs/                    # System logs, blocked IPs, etc.
+│
+├── 📁 dashboard/                # Module 6 – Dashboard & Reporting Interface
+│   │── __init__.py
+│   │── app.py                   # Flask or Streamlit app entry point
+│   │── routes.py                # Flask routes / Streamlit pages
+│   │── visualizations.py        # Plotly charts, tables, traffic graphs
+│   │── static/                  # CSS, JS, images
+│   └── templates/               # HTML files if Flask used
+│
+├── 📁 utils/                    # Shared helper functions
+│   │── database.py              # MongoDB / SQLite connector
+│   │── logger.py                # Custom logger for all modules
+│   │── config_loader.py         # Reads configuration from YAML/JSON
+│   └── performance_metrics.py   # For evaluation across modules
+│
+└── 📁  test_module/
+|    │── __init__.py
+|    │── test_data_collection.py
+|    │── test_preprocessing.py
+|    │── test_firewall_engine.py
+|    │── test_zero_trust.py
+|    │── test_incident_response.py
+|    │── test_threat_intelligence.py
+|    │── test_end_to_end.py          # Full system test
+|    └── utils_testdata.py
+|    
+└── 📁 incident_response/
+|    │── __init__.py
+|    │── analyzer.py           # analyze alerts & assign severity
+|    │── responder.py          # auto containment, escalation, notifications
+|    │── report_generator.py   # summarize incidents into PDF/JSON reports
+|    │── notifier.py           # send email/Slack alerts
+|    └── templates/
+|        └── report_template.html
+|
+└── 📁threat_intelligence/
+|    │── __init__.py
+|    │── feed_fetcher.py        # fetch data from open threat feeds / APIs
+|    │── parser.py              # normalize and extract IPs/domains
+|    │── rule_updater.py        # push to firewall rule engine
+|    │── threat_analyzer.py     # optional ML-based scoring or correlation
+|    └── cache/
+|        └── latest_feed.json

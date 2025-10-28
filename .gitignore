@@ -1,0 +1,121 @@
+# ========================================================
+# 🌐 AI-NGFW PROJECT GITIGNORE
+# ========================================================
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+MANIFEST
+
+# ---- Virtual environments ----
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ---- IDE / Editor files ----
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ---- Logs ----
+*.log
+logs/
+firewall_engine/logs/
+incident_response/logs/
+dashboard/static/logs/
+test_module/__pycache__/
+
+# ---- Configuration / Secrets ----
+config.yaml
+*.env
+.env.*
+secrets.json
+credentials.json
+
+# ---- Model & AI files ----
+ai_detection/saved_models/
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.joblib
+*.pkl
+
+# ---- Dataset files ----
+data_collection/datasets/
+*.csv
+*.jsonl
+*.pcap
+*.pcapng
+*.zip
+*.tar
+*.gz
+
+# ---- Temporary / Cache ----
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+.cache/
+tmp/
+__temp__/
+*.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# ---- Reports / Exports ----
+*.pdf
+*.html
+*.xlsx
+*.xls
+*.rtf
+*.docx
+incident_response/reports/
+incident_response/logs/*.pdf
+
+# ---- Threat Intelligence Cache ----
+threat_intelligence/cache/
+threat_intelligence/*.json
+
+# ---- Docker / Container ----
+*.pid
+*.pid.lock
+docker-compose.override.yml
+.env.docker
+.dockerignore
+
+# ---- Testing / Coverage ----
+.coverage
+coverage.xml
+htmlcov/
+pytest_cache/
+.tox/
+nosetests.xml
+test-results/
+
+# ---- System Files ----
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# ---- Misc ----
+*.bak
+*.old
+*.orig
+*.rej
+
+# ---- Jupyter Notebooks ----
+*.ipynb
+notebooks/

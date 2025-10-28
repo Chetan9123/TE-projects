@@ -1,0 +1,63 @@
+.nav {
+  background:#111;
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 16px;
+  border-radius:8px;
+}
+.nav-links a { color:#fff; text-decoration:none; margin-left:14px; }
+.nav .user { font-size:14px; margin-right:8px; color:#ccc; }
+
+.login-container {
+  background:white;
+  padding:20px;
+  border-radius:8px;
+  max-width:320px;
+  margin:80px auto;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+.login-container h2 { margin-bottom:10px; }
+.login-container label { display:block; margin-top:10px; font-weight:600; }
+.login-container input {
+  width:100%; padding:8px; margin-top:4px; border:1px solid #ccc; border-radius:4px;
+}
+.login-container button {
+  width:100%; margin-top:14px; padding:8px; background:#0a66c2;
+  color:white; border:none; border-radius:4px; cursor:pointer;
+}
+.login-container button:hover { background:#094a8f; }
+.flash li { list-style:none; padding:6px; margin:6px 0; border-radius:4px; }
+.flash .error { background:#ffefef; color:#c00; }
+.hint { color:#888; font-size:13px; text-align:center; margin-top:8px; }
+
+/* Dashboard layout */
+.container { max-width:1100px; margin:18px auto; padding:12px; }
+.nav { margin-bottom:12px; padding:14px; }
+.nav-left h1 { margin:0; font-size:20px; }
+.nav-left .muted { margin:0; font-size:13px; color:#bbb; }
+.nav-right { display:flex; gap:12px; align-items:center; }
+.status { color:#eee; font-size:13px; }
+
+.stats-row { display:flex; gap:12px; margin-bottom:12px; }
+.stat { flex:1; padding:12px; display:flex; flex-direction:column; align-items:flex-start; }
+.stat-value { font-size:20px; font-weight:700; color:#0a66c2; }
+.stat-label { font-size:12px; color:#666; margin-top:6px; }
+
+.row { display:flex; gap:12px; flex-wrap:wrap; }
+.card { background:#fff; border-radius:8px; padding:12px; box-shadow:0 2px 8px rgba(0,0,0,0.06); flex:1; min-width:280px; }
+.card h2 { margin-top:0; }
+.list { padding-left:0; }
+.list li { padding:8px 6px; border-bottom:1px solid #f1f1f1; list-style:none; }
+.muted { color:#777; }
+
+footer { text-align:center; margin-top:18px; color:#666; font-size:13px; }
+
+/* loading state (small visual cue) */
+body.loading { cursor:progress; }
+
+@media (max-width:800px) {
+  .stats-row { flex-direction:column; }
+  .row { flex-direction:column; }
+}

@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  ai_ngfw:
+    build: .
+    container_name: ai_ngfw
+    command: python main.py
+    volumes:
+      - .:/app
+    working_dir: /app
+    ports:
+      - "8501:8501"  # dashboard
+      - "8000:8000"  # optional API
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: always
+
+  mongodb:
+    image: mongo:latest
+    container_name: ngfw_mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: always
+
+volumes:
+  mongo_data:
